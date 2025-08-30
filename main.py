@@ -4,19 +4,6 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification, pipelin
 import subprocess
 import sys
 
-# Install packages at runtime
-def install_packages():
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "torch==2.8.0", "transformers==4.56.0"])
-
-# Only import after installation
-try:
-    import torch
-    from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
-except ImportError:
-    install_packages()
-    import torch
-    from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
-
 # 1. Define FastAPI app
 app = FastAPI()
 
