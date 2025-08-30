@@ -1,8 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
-import subprocess
-import sys
 
 # 1. Define FastAPI app
 app = FastAPI()
