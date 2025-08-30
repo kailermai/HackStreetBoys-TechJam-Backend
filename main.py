@@ -6,7 +6,7 @@ from transformers import AutoTokenizer, AutoModelForTokenClassification, pipelin
 app = FastAPI()
 
 # 2. Load your trained model + tokenizer
-MODEL_PATH = "kailermai03/techJamPII"  # <-- replace with path or Hugging Face model hub id
+MODEL_PATH = "kailermai03/techJamPII" 
 tokenizer = AutoTokenizer.from_pretrained(MODEL_PATH)
 model = AutoModelForTokenClassification.from_pretrained(MODEL_PATH)
 nlp = pipeline("ner", model=model, tokenizer=tokenizer, aggregation_strategy="simple")
