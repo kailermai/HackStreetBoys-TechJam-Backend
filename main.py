@@ -6,7 +6,7 @@ import sys
 
 # Install packages at runtime
 def install_packages():
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "torch==2.8.0", "transformers==4.56.0", "fastapi"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "torch==2.8.0", "transformers==4.56.0"])
 
 # Only import after installation
 try:
